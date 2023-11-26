@@ -1,143 +1,169 @@
 body {
-    font-family: "Cera Pro", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5dc;
+  font-family: "Cera Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5dc;
 }
 
 .header {
-    background-color: #8a8a5c;
-    color: white;
-    font-size: 20px;
-    text-align: left;
-    padding: 20px 0 0 0;
-    width: 100%;
-    margin: auto;
-    border-bottom: 1px solid black;
-    box-sizing: border-box;
+  background-color: #8a8a5c;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  padding: 20px 0 0 0;
+  width: 100%;
+  margin: auto;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 
 .header .header-content {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header .header-content img {
-    width: 70px;
-    height: auto;
-    margin-right: 20px;
-    margin-left: 10%;
+  width: 70px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 10%;
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #8a8a5c;
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    font-size: 30px;
-    margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #8a8a5c;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 50px;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
 }
 
 .navbar li {
-    flex: 1;
-    text-align: center;
-    margin: 0;
+  flex: 1;
+  text-align: center;
+  margin: 0;
 }
 
 .navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 0;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  text-decoration: none;
 }
 
 .navbar li a:hover {
-    background-color: #4f563b;
-    color: black;
-    font-weight: bold;
+  background-color: #4f563b;
+  color: black;
+  font-weight: bold;
 }
 
-.announcements, .content {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    background-color: transparent;
-    padding: px;
-    margin: 20px auto;
-    width: 80%;
+.announcements,
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: transparent;
+  padding: px;
+  margin: 20px auto;
+  width: 80%;
 }
 
-.announcements h2, .content h2 {
-    font-size: 40px;
-    text-align: left;
-    color: black;
-    padding: 0 0 20px 20px;
-    border-bottom: 1px solid black;
+.announcements h2,
+.content h2 {
+  font-size: 40px;
+  text-align: left;
+  color: black;
+  padding: 0 0 20px 20px;
+  border-bottom: 1px solid black;
 }
 
 .announcement {
-    background-color: #b0bdaa;
-    margin-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    text-align: justify;
-    font-size: 20px;
-    position: relative; 
+  background-color: #b0bdaa;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: justify;
+  font-size: 20px;
+  position: relative;
+}
+
+.announcement.extra-announcement {
+  display: none;
 }
 
 .announcement .announcement-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .announcement .announcement-header h3 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .announcement .announcement-header .announcement-date {
-    font-weight: bold;
-    font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #contact-section .content-text p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-#showMore, #showLess {
-    background-color: #4f563b;
-    color: white;
-    border: none;
-    padding: 15px 16px;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px 35% 0px 35%;
-    border-radius: 5px;
+#showMore,
+#showLess {
+  background-color: #4f563b;
+  color: white;
+  border: none;
+  padding: 15px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 35% 0px 35%;
+  border-radius: 5px;
 }
 
-#showMore:hover, #showLess:hover {
-    background-color: #354038;
+#showMore:hover,
+#showLess:hover {
+  background-color: #354038;
 }
 
+.announcement p {
+  position: relative;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.announcement p.announcement-opened {
+  max-height: 100%;
+}
+
+.announcement .shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, rgb(176, 189, 170, 0), #b0bdaa);
+}

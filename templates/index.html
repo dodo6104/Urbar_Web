@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbár Plavecký Mikuláš</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+    <link rel="icon" type="image/png" href="static/forest.png">
+
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="header-content">
+            <img src="static/forest.png" alt="Forest icon">
+            <h1>Urbár Plavecký Mikuláš</h1>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#oznamy-section">Oznamy</a></li>
+            <li><a href="#about-section">O nás</a></li>
+            <li><a href="#contact-section">Kontakt</a></li>
+        </ul>
+    </div>
+    
+    <div class="announcements" id="oznamy-section">
+        <h2>Oznamy</h2> 
+        {% for oznam in oznamy %}
+        <div class="announcement {% if loop.index > 3 %}extra-announcement{% endif %}" {% if loop.index > 3 %}style="display:none;"{% endif %}>
+            <div class="announcement-header">
+                <h3>{{ oznam.nazov }}</h3>
+                <p class="announcement-date">Dátum pridania: {{ oznam.date }}</p>
+            </div>
+            <p>{{ oznam.text }}</p>
+        </div>
+        {% endfor %}
+        <button id="showMore" {% if oznamy|length <= 3 %}style="display:none;"{% endif %}>Zobraziť viac oznamov</button>
+        <button id="showLess" style="display:none;">Zobraziť menej oznamov</button>
+    </div>
+    <script src="{{ url_for('static', filename='home_script.js') }}"></script>
+
+    <div class="content" id="about-section">
+        <h2>O nás</h2>
+        <div class="content-text">
+            <p>...</p>
+        </div>
+    </div>
+    
+    <div class="content" id="contact-section">
+        <h2>Kontakt</h2>
+        <div class="content-text">
+            <p><strong>Telefónne číslo:</strong> +421 905 659 785</p>
+            <p><strong>Adresa sídla:</strong> <a href="https://www.google.com/maps/place/Plaveck%C3%BD+Mikul%C3%A1%C5%A1+58,+906+35+Plaveck%C3%BD+Mikul%C3%A1%C5%A1/@48.5092298,17.3026745,17z/data=!3m1!4b1!4m6!3m5!1s0x476cb99acfecb9d5:0x3030714d0cd2a660!8m2!3d48.5092298!4d17.3052494!16s%2Fg%2F11crrmgmv6?entry=ttu" target="_blank">Plavecký Mikuláš 58, 906 35 Plavecký Mikuláš</a></p>
+        </div>
+    </div>
+</body>
+</html>

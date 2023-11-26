@@ -105,6 +105,7 @@ body {
   text-align: justify;
   font-size: 20px;
   position: relative;
+  min-width: 630px;
 }
 
 .announcement.extra-announcement {
@@ -142,6 +143,7 @@ body {
   cursor: pointer;
   margin: 10px 35% 0px 35%;
   border-radius: 5px;
+  min-width: 150px;
 }
 
 #showMore:hover,

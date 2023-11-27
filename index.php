@@ -14,7 +14,7 @@ $oznamy = [
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Urbár Plavecký Mikuláš</title>
     <link rel="stylesheet" href="static/home_style.css">
     <link rel="icon" type="image/png" href="static/forest.png">
@@ -34,9 +34,6 @@ $oznamy = [
             <li><a href="#contact-section">Kontakt</a></li>
         </ul>
     </div>
-    
-
-
     <div class="announcements" id="oznamy-section">
         <h2>Oznamy</h2>
         <div id="announcements-container"></div>
@@ -49,7 +46,15 @@ $oznamy = [
     <div class="content" id="about-section">
         <h2>O nás</h2>
         <div class="content-text">
-            <p>...</p>
+        <h3>Spoločenstvo urbarialistov – pozemkové spoločenstvo Plavecký Mikuláš</h3>
+        <p><strong>IČO:</strong> 31801757</p>
+        <p><strong>Dátum zápisu:</strong> 26.11.1997</p>
+        <p><strong>Vložka číslo:</strong> R-0006/MA</p>
+        <p><strong>Stav PS:</strong> Zaregistrovaná</p>
+        <p><strong>Funkčné obdobie výboru:</strong> 5</p>
+        <p><strong>Funkčné obdobie dozornej rady:</strong> 5</p>
+        <p><strong>Vykonáva podnikateľskú činnosť?</strong> nie</p>
+        <p><strong>Spoločenstvo vlastníkov spoločne obhospod. nehnuteľnosti:</strong> nie</p>
         </div>
     </div>
     
@@ -57,7 +62,8 @@ $oznamy = [
         <h2>Kontakt</h2>
         <div class="content-text">
             <p><strong>Telefónne číslo:</strong> +421 905 659 785</p>
-            <p><strong>Adresa sídla:</strong> <a href="https://www.google.com/maps/place/Plaveck%C3%BD+Mikul%C3%A1%C5%A1+58,+906+35+Plaveck%C3%BD+Mikul%C3%A1%C5%A1/@48.5092298,17.3026745,17z/data=!3m1!4b1!4m6!3m5!1s0x476cb99acfecb9d5:0x3030714d0cd2a660!8m2!3d48.5092298!4d17.3052494!16s%2Fg%2F11crrmgmv6?entry=ttu" target="_blank">Plavecký Mikuláš 58, 906 35 Plavecký Mikuláš</a></p>
+            <p><strong>Email:</strong> urbarplaveckymikulas@gmail.com</p>
+            <p><strong>Adresa sídla:</strong> <a href="https://maps.app.goo.gl/GtUATfrQctZ9dwV17" target="_blank">Plavecký Mikuláš 58, 906 35 Plavecký Mikuláš</a></p>
         </div>
     </div>
 </body>

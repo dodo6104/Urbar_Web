@@ -119,9 +119,13 @@ function getSize() {
     const MAX_HEIGHT = 150;
     var $oznamText = $oznam.querySelector("p.annoucement-text");
     var $shadow = $oznam.querySelector(".shadow");
+    var $show_more_button = $oznam.querySelector(".show-more-button");
+    var $show_less_button = $oznam.querySelector(".show-less-button");
     if ($oznamText.clientHeight < MAX_HEIGHT) {
       if($shadow) {
         $shadow.remove();
+        $show_less_button.remove();
+        $show_more_button.remove();
       }
  
       removeElementByText($oznam, "Zobraziť viac");
@@ -134,16 +138,19 @@ function getSize() {
         $oznamText.insertAdjacentElement("beforeend", shadowElement);
 
         const showMoreDiv = document.createElement("div");
-        showMoreDiv.textContent = "Zobraziť viac";
+        showMoreDiv.textContent = "Prečítať viac";
+        showMoreDiv.className = "show-more-button";
         $oznam.appendChild(showMoreDiv);
 
         const showLessDiv = document.createElement("div");
-        showLessDiv.textContent = "Zobraziť menej";
+        showLessDiv.textContent = "Prečítať menej";
+        showLessDiv.className = "show-less-button";
         $oznam.appendChild(showLessDiv);
         showLessDiv.style.display = "none";
 
         showMoreDiv.addEventListener("click", (e) => {
           $oznamText.classList.add("announcement-opened");
+          $oznamText.style.height = $oznamText.scrollHeight + "px";
           showLessDiv.style.display = "block";
           showMoreDiv.style.display = "none";
           shadowElement.style.display = "none";

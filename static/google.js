@@ -1,13 +1,12 @@
 import GSheetProcessor from "../google/gsheetsprocessor.js";
 
 // test sheet id, Sheets API key, and valid auth scope
-const demoSheetId = "1GJ5Dt-gI4kwFSuTLWyaoYpBC75_a6jxlVg1jjJh3-kc";
-const apiKey = "AIzaSyBJvSu5Tj7q5R7ZcGqipS2igyvZ25-CRXE";
-
+const demoSheetId = "1IinQGIciZSDeksaI-QYvPHVqctdKnqZIn-YDcxObBMk";
+const apiKey = "AIzaSyDLKym7JLtw8pI7F-Gzb4b6foLYkmPyri4";
 const options = {
   apiKey: apiKey,
   sheetId: demoSheetId,
-  sheetNumber: 3,
+  sheetNumber: 1,
   returnAllResults: true,
 };
 

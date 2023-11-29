@@ -132,7 +132,7 @@ function getSize() {
       removeElementByText($oznam, "Zobraziť menej");
     }
     if ($oznamText && !$shadow) {
-      if ($oznamText.clientHeight == MAX_HEIGHT) {
+      if ($oznamText.clientHeight >= MAX_HEIGHT) {
         const shadowElement = document.createElement("span");
         shadowElement.className = "shadow";
         $oznamText.insertAdjacentElement("beforeend", shadowElement);
@@ -148,14 +148,19 @@ function getSize() {
         $oznam.appendChild(showLessDiv);
         showLessDiv.style.display = "none";
 
+        if ($oznamText.clientHeight > MAX_HEIGHT){
+          $oznamText.classList.add("announcement-opened");
+          showLessDiv.style.display = "block";
+          showMoreDiv.style.display = "none";
+          shadowElement.style.display = "none";
+        }
+
         showMoreDiv.addEventListener("click", (e) => {
           $oznamText.classList.add("announcement-opened");
-          $oznamText.style.height = $oznamText.scrollHeight + "px";
           showLessDiv.style.display = "block";
           showMoreDiv.style.display = "none";
           shadowElement.style.display = "none";
         });
-
         showLessDiv.addEventListener("click", (e) => {
           $oznamText.classList.remove("announcement-opened");
           showLessDiv.style.display = "none";

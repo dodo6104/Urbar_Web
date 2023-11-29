@@ -1,9 +1,9 @@
 body {
+  min-width: 788px;
   font-family: "Cera Pro", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5dc;
-  min-width: 100%;
 }
 
 .header {
@@ -16,7 +16,6 @@ body {
   margin: auto;
   border-bottom: 1px solid black;
   box-sizing: border-box;
-  min-width: 100%;
 }
 
 .header .header-content {
@@ -43,7 +42,6 @@ body {
   margin: auto;
   font-size: 30px;
   margin-bottom: 50px;
-  min-width: 100%;
 }
 
 .navbar ul {
@@ -167,10 +165,12 @@ body {
   position: relative;
   max-height: 150px;
   overflow: hidden;
+  transition: max-width 0.5s ease-in-out;
 }
 
 .announcement p.announcement-opened {
   max-height: 100%;
+  transition: max-width 0.5s ease-in-out;
 }
 
 .announcement .shadow {

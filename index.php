@@ -1,20 +1,9 @@
-<?php
-$oznamy = [
-  ["nazov" => "Pozvánka na Oslavy Dňa Zeme", "text" => "Nezmeškajte prednášku o ochrane prírody, ktorá sa uskutoční v miestnom kultúrnom dome dňa 5. júla.", "date" => "28.11.2023"],
-  ["nazov" => "Pozvánka na Oslavy Dňa Zeme", "text" => "Plánujeme výsadbu nových stromov v oblasti severného parku. Všetci sú vítaní sa zúčastniť 22. novembra od 9:00.", "date" => "28.11.2023"],
-  ["nazov" => "Zber Odpadu v Parku", "text" => "Zorganizujeme zber odpadu v mestskom parku tento víkend. Pridajte sa k nám a pomôžte udržať náš park čistý!", "date" => "28.11.2023"],
-  ["nazov" => "Pozvánka na Oslavy Dňa Zeme", "text" => "Srdečne vás pozývame na oslavy Dňa Zeme, ktoré sa uskutočnia 22. apríla na hlavnom námestí.", "date" => "28.11.2023"],
-  ["nazov" => "Zber Odpadu v Parku", "text" => "Nezmeškajte prednášku o ochrane prírody, ktorá sa uskutoční v miestnom kultúrnom dome dňa 5. júla.", "date" => "28.11.2023"],
-  ["nazov" => "Zber Odpadu v Parku", "text" => "Zorganizujeme zber odpadu v mestskom parku tento víkend. Pridajte sa k nám a pomôžte udržať náš park čistý!", "date" => "28.11.2023"],
-  ["nazov" => "Uzavretie Lesnej Cesty", "text" => "Zapojte sa do našej fotografickej súťaže a zachyťte krásy našej prírody. Najlepšie snímky budú vystavené v knižnici.", "date" => "28.11.2023"],
-  ["nazov" => "Zber Odpadu v Parku", "text" => "Nezmeškajte prednášku o ochrane prírody, ktorá sa uskutoční v miestnom kultúrnom dome dňa 5. júla.", "date" => "28.11.2023"],
-];
-?>
+<?php?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1000">
     <title>Urbár Plavecký Mikuláš</title>
     <link rel="stylesheet" href="static/home_style.css">
     <link rel="icon" type="image/png" href="static/forest.png">
@@ -36,7 +25,9 @@ $oznamy = [
     </div>
     <div class="announcements" id="oznamy-section">
         <h2>Oznamy</h2>
-        <div id="announcements-container"></div>
+        <div id="announcements-container">
+            <div class="loader"></div>
+        </div>
         <button id="showMore" style="display:none;">Zobraziť viac oznamov</button>
         <button id="showLess" style="display:none;">Zobraziť menej oznamov</button>
     </div>

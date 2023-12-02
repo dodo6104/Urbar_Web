@@ -32,9 +32,9 @@ document.querySelectorAll(".navbar a").forEach((anchor) => {
 
 document.addEventListener("OznamyLoaded", function () {
   const oznamy = window.oznamy || [];
-  const announcementsContainer = document.getElementById(
-    "announcements-container"
-  );
+  const announcementsContainer = document.getElementById("announcements-container");
+
+  announcementsContainer.innerHTML = '';
 
   oznamy.forEach((oznam, index) => {
     if (oznam.nazov && oznam.datum && oznam.text) {
@@ -52,7 +52,7 @@ document.addEventListener("OznamyLoaded", function () {
 
       const textElement = document.createElement("p");
       textElement.className = "annoucement-text";
-      textElement.textContent = oznam.text;
+      textElement.innerHTML = oznam.text.replace(/\n/g, "<br>");
 
       announcementHeaderDiv.appendChild(titleElement);
       announcementHeaderDiv.appendChild(dateElement);

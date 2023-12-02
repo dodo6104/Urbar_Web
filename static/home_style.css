@@ -9,7 +9,7 @@ body {
 .header {
   background-color: #8a8a5c;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   text-align: left;
   padding: 20px 0 0 0;
   width: 100%;
@@ -78,7 +78,6 @@ body {
   flex-direction: column;
   align-items: left;
   background-color: transparent;
-  padding: px;
   margin: 20px auto;
   width: 80%;
 }
@@ -86,7 +85,7 @@ body {
 .announcements h2,
 .content h2 {
   margin: 0 0px 20px 0px;
-  font-size: 70px;
+  font-size: 35px;
   text-align: left;
   color: black;
   padding: 0 0 20px 0px;
@@ -121,18 +120,20 @@ body {
 }
 
 .announcement .announcement-header h3 {
+  font-size: 30px;
   margin: 0;
-  font-size: 24px;
   font-weight: bold;
+  text-align: left;
 }
 
 .announcement .announcement-header .announcement-date {
   font-weight: bold;
   font-size: 16px;
+  text-align: right;
 }
 
 #about-section .content-text p {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #about-section .content-text h3 {
@@ -140,7 +141,7 @@ body {
 }
 
 #contact-section .content-text p {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #showMore,
@@ -162,15 +163,16 @@ body {
 }
 
 .announcement p {
+  font-size: 25px;
   position: relative;
   max-height: 150px;
   overflow: hidden;
-  transition: max-width 0.5s ease-in-out;
+  line-height: 1.5;
 }
 
 .announcement p.announcement-opened {
   max-height: 100%;
-  transition: max-width 0.5s ease-in-out;
+  line-height: 1.5;
 }
 
 .announcement .shadow {
@@ -186,14 +188,31 @@ body {
   background-color: #4f563b;
   color: white;
   padding: 10px 0px;
-  max-width: 150px;
-  min-width: 150px;
+  max-width: 200px;
+  min-width: 200px;
   cursor: pointer;
   width: auto; 
   text-align: center;
   border-radius: 5px;
+  font-size: 25px;
 }
 
 .show-less-button{
   font-weight: normal;
+}
+
+
+.loader {
+  border: 16px solid #b0bdaa;
+  border-top: 16px solid #4f563b; 
+  border-radius: 50%; 
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

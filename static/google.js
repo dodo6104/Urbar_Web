@@ -11,20 +11,20 @@ const options = {
 };
 
 GSheetProcessor(
-  options,
+  options,  
   (results) => {
     window.oznamy = [];
+    let processedResults = [];
 
-    results.forEach((result) => {
-      Object.keys(result).forEach((key) => {
-        if (key === "nazov") {
-          const t = results.filter((res) => res.nazov === result[key]);
-          if (t[0] && t[0].nazov && t[0].datum && t[0].text) {
-            window.oznamy.push(...t);
-          }
-        }
-      });
+    results.forEach((result, index) => {
+      if (result.nazov && result.datum && result.text) {
+        result.parsedDate = new Date(result.datum);
+        processedResults.push(result);
+      }
     });
+    processedResults.sort((a, b) => b.parsedDate - a.parsedDate);
+
+    window.oznamy = processedResults;
     let event = new Event("OznamyLoaded");
     document.dispatchEvent(event);
   },
